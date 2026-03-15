@@ -11,7 +11,39 @@
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:'Poppins',sans-serif;background:#f5f7ff;color:#333}
+/* TUTOR SECTION */
 
+.tutor-section{
+max-width:1150px;
+margin:70px auto;
+padding:20px;
+}
+
+.tutor-box{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.tutor-photo{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid #6c4df6;
+box-shadow:0 0 25px rgba(108,77,246,0.6);
+}
+
+.tutor-info{
+max-width:500px;
+}
+
+.tutor-info h3{
+font-size:26px;
+margin-bottom:10px;
+}
 /* NAVBAR */
 .nav{
 display:flex;
@@ -244,6 +276,32 @@ NextStep Learning
 </div>
 
 </section>
+```html
+<section class="tutor-section">
+
+<h2 class="section-title">Meet Your Tutor</h2>
+
+<div class="tutor-box">
+
+<img src="tutor.png" class="tutor-photo">
+
+<div class="tutor-info">
+<h3>Your Name</h3>
+<p>
+Experienced Spoken English trainer helping students build confidence,
+improve fluency, and communicate effectively in real-life situations.
+With practical exercises and interactive sessions, students learn
+English naturally and comfortably.
+</p>
+
+<p><strong>Experience:</strong> 5+ Years Teaching Spoken English</p>
+
+</div>
+
+</div>
+
+</section>
+```
 
 <div class="container">
 
