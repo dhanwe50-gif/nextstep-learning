@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextStep Learning – Spoken English</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;background:#f5f7ff;color:#333}
+
+/* NAVBAR */
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.06);
+position:sticky;
+top:0;
+z-index:10
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+font-size:20px;
+color:#2a5bd7
+}
+
+/* HERO */
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+max-width:1150px;
+margin:auto;
+padding:70px 20px;
+gap:40px
+}
+
+.hero-text h1{
+font-size:46px;
+margin:0 0 15px
+}
+
+.hero-text p{
+font-size:18px;
+margin-bottom:25px;
+color:#555
+}
+
+.highlight{color:#6c4df6}
+
+.cta{
+display:flex;
+gap:15px;
+flex-wrap:wrap
+}
+
+.btn{
+padding:16px 28px;
+border-radius:10px;
+font-weight:600;
+text-decoration:none;
+display:inline-block
+}
+
+.btn-primary{
+background:linear-gradient(120deg,#6c4df6,#2a5bd7);
+color:white
+}
+
+.btn-whatsapp{
+background:#25D366;
+color:white
+}
+
+.hero-img{
+text-align:center
+}
+
+.hero-img img{
+width:320px;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15)
+}
+
+/* FEATURES */
+.container{max-width:1150px;margin:auto;padding:30px 20px}
+
+.section-title{text-align:center;font-size:32px;margin:50px 0 30px;color:#2d2d8f}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+
+.feature{
+background:white;
+padding:28px;
+border-radius:14px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s
+}
+
+.feature:hover{transform:translateY(-6px)}
+
+.feature i{font-size:36px;margin-bottom:10px;color:#5c4df6}
+
+/* CURRICULUM */
+.curriculum{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+
+.week{background:white;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,0.08);overflow:hidden}
+
+.week-header{padding:14px;color:white;font-weight:600;text-align:center}
+
+.week1{background:linear-gradient(120deg,#ff7b2c,#ff3b3b)}
+.week2{background:linear-gradient(120deg,#2e8bff,#5c4df6)}
+.week3{background:linear-gradient(120deg,#7a3df0,#b63ed9)}
+
+.week ul{padding:18px 25px;margin:0}
+.week li{margin-bottom:8px}
+
+/* PRICE */
+.price{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:linear-gradient(120deg,#eef2ff,#e6f7ff);
+padding:30px;
+border-radius:18px;
+margin-top:40px;
+flex-wrap:wrap;
+gap:20px
+}
+
+.amount{font-size:42px;font-weight:700;color:#2a5bd7}
+
+.enroll{
+background:#25D366;
+color:white;
+padding:18px 35px;
+border:none;
+border-radius:10px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+text-decoration:none;
+display:inline-block
+}
+
+/* FORM */
+.form-section{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+margin-top:40px
+}
+
+form{display:grid;gap:15px}
+
+input{
+padding:14px;
+border-radius:8px;
+border:1px solid #ddd;
+font-family:'Poppins',sans-serif
+}
+
+button.submit{
+background:#2a5bd7;
+color:white;
+padding:14px;
+border:none;
+border-radius:8px;
+font-weight:600;
+cursor:pointer
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+box-shadow:0 6px 15px rgba(0,0,0,0.2)
+}
+
+footer{text-align:center;padding:25px;margin-top:50px;background:#0e0e2c;color:#bbb}
+
+@media(max-width:900px){
+.hero{grid-template-columns:1fr;text-align:center}
+.hero-img img{width:260px;height:260px}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+<div class="logo">
+<svg width="34" height="34" viewBox="0 0 64 64" fill="none">
+<circle cx="32" cy="32" r="30" fill="url(#g)"/>
+<path d="M20 36L32 20L44 36" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="32" cy="40" r="3" fill="white"/>
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="64" y2="64">
+<stop stop-color="#6c4df6"/>
+<stop offset="1" stop-color="#2a5bd7"/>
+</linearGradient>
+</defs>
+</svg>
+NextStep Learning
+</div>
+</div>
+
+<section class="hero">
+
+<div class="hero-text">
+<h1>Master <span class="highlight">Spoken English</span> with Confidence</h1>
+<p>Improve fluency, build confidence, and communicate effectively in real life situations with expert guidance.</p>
+
+<div class="cta">
+<a class="btn btn-primary" href="#register">Join the Course</a>
+<a class="btn btn-whatsapp" href="https://wa.me/919000000000" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Enroll</a>
+</div>
+
+</div>
+
+<div class="hero-img">
+<img src="tutor.png" alt="Tutor">
+</div>
+
+</section>
+
+<div class="container">
+
+<h2 class="section-title">Why Choose NextStep Learning?</h2>
+
+<div class="features">
+<div class="feature"><i class="fa-solid fa-user-graduate"></i><h4>Expert Instructors</h4><p>Experienced trainers guiding every learner.</p></div>
+<div class="feature"><i class="fa-solid fa-video"></i><h4>Interactive Lessons</h4><p>Live practice sessions and engaging activities.</p></div>
+<div class="feature"><i class="fa-solid fa-comments"></i><h4>Practical Speaking</h4><p>Real-life conversations and discussion tasks.</p></div>
+<div class="feature"><i class="fa-solid fa-clock"></i><h4>Flexible Schedule</h4><p>Convenient timings for students.</p></div>
+</div>
+
+<h2 class="section-title">Course Curriculum (3‑Month Program)</h2>
+
+<div class="curriculum">
+
+<div class="week">
+<div class="week-header week1">Month 1: Foundation & Basic Communication</div>
+<ul>
+<li>Basic Grammar for Speaking</li>
+<li>Daily Use Vocabulary</li>
+<li>Greetings & Self Introduction</li>
+<li>Sentence Formation Practice</li>
+<li>Confidence Building Activities</li>
+<li>Basic Conversation Practice</li>
+</ul>
+</div>
+
+<div class="week">
+<div class="week-header week2">Month 2: Conversational English</div>
+<ul>
+<li>Fluency Improvement Techniques</li>
+<li>Group Discussions</li>
+<li>Storytelling Practice</li>
+<li>Common English Expressions</li>
+<li>Role‑play Conversations</li>
+<li>Pronunciation & Accent Practice</li>
+</ul>
+</div>
+
+<div class="week">
+<div class="week-header week3">Month 3: Advanced Communication</div>
+<ul>
+<li>Public Speaking Basics</li>
+<li>Interview Communication Skills</li>
+<li>Professional English for Workplace</li>
+<li>Presentation Skills</li>
+<li>Real‑life Situation Conversations</li>
+<li>Final Speaking Assessment</li>
+</ul>
+</div>
+
+</div>
+
+<div class="price">
+<div>
+<h2>Course Fee</h2>
+<div class="amount">₹1500 / Month</div>
+<p>3 Month Program</p>
+</div>
+<a class="enroll" href="https://wa.me/919000000000" target="_blank"><i class="fa-brands fa-whatsapp"></i> Enroll on WhatsApp</a>
+</div>
+
+<h2 id="register" class="section-title">Register Now</h2>
+<div class="form-section">
+<form id="registrationForm">
+<input id="name" placeholder="Full Name" required>
+<input id="phone" placeholder="Phone Number" required>
+<input id="email" placeholder="Email Address" required>
+<button type="submit" class="submit">Submit Registration</button>
+</form>
+
+<script>
+const form = document.getElementById('registrationForm');
+
+form.addEventListener('submit', function(e){
+ e.preventDefault();
+
+ const name = document.getElementById('name').value;
+ const phone = document.getElementById('phone').value;
+ const email = document.getElementById('email').value;
+
+ const student = {name, phone, email, date: new Date().toLocaleString()};
+
+ let students = JSON.parse(localStorage.getItem('nextstep_students')) || [];
+ students.push(student);
+
+ localStorage.setItem('nextstep_students', JSON.stringify(students));
+
+ alert('Registration Saved! We will contact you soon.');
+
+ form.reset();
+});
+</script>
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/919000000000" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+<footer>© 2026 NextStep Learning</footer>
+
+</body>
+</html>
